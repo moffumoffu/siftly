@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Siftly</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div id="app">
+        <nav>
+            <a href="/" class="nav-logo">Siftly</a>
+            <div class="nav-links">
+                <a href="/" class="active">Feed</a>
+                <a href="/about">About</a>
+            </div>
+        </nav>
+
+        <div id="header">
+            <div>
+                <h1>Siftly</h1>
+                <p class="subtitle">AI-powered news filter</p>
+            </div>
+            <button id="refresh-btn" onclick="loadPosts()">
+                <span id="btn-text">Load Posts</span>
+            </button>
+        </div>
+
+        <div id="filters">
+            <button class="filter-btn active" data-filter="All" onclick="setFilter('All')">All</button>
+            <button class="filter-btn useful" data-filter="Useful" onclick="setFilter('Useful')">Useful</button>
+            <button class="filter-btn noise" data-filter="Noise" onclick="setFilter('Noise')">Noise</button>
+            <button class="filter-btn spam" data-filter="Spam" onclick="setFilter('Spam')">Spam</button>
+            <select id="sort-select" onchange="setSort(this.value)">
+                <option value="default">Sort: Default</option>
+                <option value="upvotes">Sort: Upvotes</option>
+                <option value="quality">Sort: Quality</option>
+            </select>
+        </div>
+
+        <div id="status"></div>
+        <div id="posts"></div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>

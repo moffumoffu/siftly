@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Siftly — How it works</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div id="app">
+        <nav>
+            <a href="/" class="nav-logo">Siftly</a>
+            <div class="nav-links">
+                <a href="/">Feed</a>
+                <a href="/about" class="active">About</a>
+            </div>
+        </nav>
+
+        <div class="about-hero">
+            <h2>How Siftly works</h2>
+            <p class="subtitle">A simple AI pipeline that reads the news so you don't have to.</p>
+        </div>
+
+        <div class="steps">
+            <div class="step-card">
+                <div class="step-num">01</div>
+                <div class="step-body">
+                    <h3>Fetch from Hacker News</h3>
+                    <p>Siftly pulls a random selection of 20 posts from the top 100 stories on Hacker News using their public Firebase API. No scraping, no login required.</p>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-num">02</div>
+                <div class="step-body">
+                    <h3>Analyze with AI</h3>
+                    <p>Each post title is sent to Groq's API running Llama 3.3 70B. The model returns a verdict (Useful, Noise, or Spam), a quality score out of 10, and a one-sentence summary.</p>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-num">03</div>
+                <div class="step-body">
+                    <h3>Filter and sort</h3>
+                    <p>Results are displayed as cards with color-coded verdicts. You can filter by category or sort by upvotes and quality score to find what matters most.</p>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-num">04</div>
+                <div class="step-body">
+                    <h3>Refresh anytime</h3>
+                    <p>Hit refresh to pull a fresh random batch. Each load is a different slice of the top 100, so you're never seeing the exact same feed twice.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tech-stack">
+            <h3>Tech stack</h3>
+            <div class="stack-pills">
+                <span class="pill">Python</span>
+                <span class="pill">Flask</span>
+                <span class="pill">Groq API</span>
+                <span class="pill">Llama 3.3 70B</span>
+                <span class="pill">Hacker News API</span>
+                <span class="pill">HTML / CSS / JS</span>
+            </div>
+        </div>
+
+        <div class="about-footer">
+            <p>Built as a personal portfolio project.</p>
+        </div>
+    </div>
+</body>
+</html>
