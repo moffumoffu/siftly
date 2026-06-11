@@ -66,5 +66,9 @@ def get_posts():
 def about():
     return render_template("about.html")
 
+@app.route("/health")
+def health():
+    return "ok", 200
+
 if __name__ == "__main__":
     app.run(debug=True)
