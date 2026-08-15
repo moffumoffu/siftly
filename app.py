@@ -24,7 +24,7 @@ def fetch_hn_posts(limit=20):
 def analyze_post(title, text=""):
     content = f"Title: {title}\n{('Body: ' + text) if text else ''}"
     response = client.chat.completions.create(
-        model="qwen-qwq-32b",
+        model="llama-3.3-70b-versatile",
         messages=[
             {
                 "role": "system",
